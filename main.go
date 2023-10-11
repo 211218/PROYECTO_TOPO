@@ -3,10 +3,10 @@ package main
 import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
-	"pelota/scenes"
+	"topos/scenes"
 )
 
-func main(){
+func main() {
 	myApp := app.New()
 	myWindow := myApp.NewWindow("Game Topo")
 	myWindow.CenterOnScreen()

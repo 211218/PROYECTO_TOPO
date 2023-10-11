@@ -1,4 +1,4 @@
-module pelota
+module topos
 
 go 1.21.0
 
