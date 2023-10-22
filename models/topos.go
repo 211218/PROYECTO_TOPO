@@ -1,7 +1,6 @@
 package models
 
 import (
-	"fmt"
 	"time"
 
 	"fyne.io/fyne/v2"
@@ -126,7 +125,7 @@ func (t *Topos) Run() {
 			break
 		}
 
-		fmt.Println(t.posX)
+		//fmt.Println(t.posX)
 		t.topo.Move(fyne.NewPos(t.posX, t.posY)) // Cambia el valor "100" por la posición Y deseada
 		time.Sleep(16 * time.Millisecond)        // Controla la velocidad de movimiento
 	}

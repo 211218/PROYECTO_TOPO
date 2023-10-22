@@ -32,22 +32,22 @@ func (s *MainMenuScene) Show() {
 
 	pelota1 := canvas.NewImageFromURI(storage.NewFileURI("./assets/ball.png"))
 	pelota1.Resize(fyne.NewSize(150, 90))
-	pelota1.Move(fyne.NewPos(200, 300))
+	pelota1.Move(fyne.NewPos(150, 300))
 	//Creamos el modelo de la primera pelota
-	p1 = models.NewBall(float32(200), float32(300), float32(300), float32(100), pelota1, t)
+	p1 = models.NewBall(float32(150), float32(300), float32(300), float32(100), pelota1, t)
 
 	pelota2 := canvas.NewImageFromURI(storage.NewFileURI("./assets/ball.png"))
 	pelota2.Resize(fyne.NewSize(150, 90))
-	pelota2.Move(fyne.NewPos(400, 100))
+	pelota2.Move(fyne.NewPos(350, 100))
 	//Creamos el modelo de la segunda pelota
-	p2 = models.NewBall(float32(400), float32(100), float32(300), float32(100), pelota2, t)
+	p2 = models.NewBall(float32(350), float32(100), float32(300), float32(100), pelota2, t)
 
 	// creamos un tercer modelo de pelota
 	pelota3 := canvas.NewImageFromURI(storage.NewFileURI("./assets/ball.png"))
 	pelota3.Resize(fyne.NewSize(150, 90))
-	pelota3.Move(fyne.NewPos(600, 300))
+	pelota3.Move(fyne.NewPos(550, 300))
 	//Creamos el modelo de la tercera pelota
-	p3 = models.NewBall(float32(600), float32(300), float32(300), float32(100), pelota3, t)
+	p3 = models.NewBall(float32(550), float32(300), float32(300), float32(100), pelota3, t)
 
 	// Cargar la imagen del topo
 	topo := canvas.NewImageFromURI(storage.NewFileURI("./assets/super_go.png"))
@@ -59,7 +59,7 @@ func (s *MainMenuScene) Show() {
 	topoWin := canvas.NewImageFromURI(storage.NewFileURI("./assets/topo_elegant.png"))
 	topoWin.Resize(fyne.NewSize(60, 100))
 	topoWin.Move(fyne.NewPos(730, 180))
-	tw = models.NewTopoWin(float32(0), float32(280), topoWin)
+	tw = models.NewTopoWin(float32(720), float32(200), float32(300), float32(100), topoWin, t)
 
 	// Creamos el modelo del topo
 	t = models.NewTopos(float32(0), float32(280), topo, p1, p2, p3, tw)
@@ -76,6 +76,7 @@ func (s *MainMenuScene) Show() {
 	// aqui se muestran los elementos en la ventana
 	s.window.SetContent(container.NewWithoutLayout(background, pelota1, pelota2, pelota3, topo, topoWin, botonIniciar, botonDetener))
 }
+
 
 func (s *MainMenuScene) StartGame() {
 	go t.Run()

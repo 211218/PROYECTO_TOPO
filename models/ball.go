@@ -1,7 +1,6 @@
 package models
 
 import (
-	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"time"
@@ -44,11 +43,12 @@ func (p *Ball) Run() {
 
 		// Verifica si la Ball ha chocado con el topo y terminar el proceso del topo
 
-		fmt.Println(p.posY)
+		//fmt.Println(p.posY)
 		p.pel.Move(fyne.NewPos(p.posX, p.posY)) // Usa la posición X de la estructura
-		time.Sleep(4 * time.Millisecond)        // Controla la velocidad de movimiento
+		time.Sleep(1 * time.Millisecond)        // Controla la velocidad de movimiento
 	}
 }
+
 
 func (p *Ball) SetStatus(status bool) {
 	p.status = status
